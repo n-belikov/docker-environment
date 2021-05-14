@@ -5,4 +5,4 @@
 # Allow template and default server config
 !template
 !_default.conf
-
+!example.conf
