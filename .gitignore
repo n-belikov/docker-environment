@@ -1,0 +1,12 @@
+*
+!.gitignore
+
+!nginx/
+!nginx/*
+
+!mariadb/
+!mariadb/*.yml
+!mariadb/*.sh
+
+!php/
+!php/**

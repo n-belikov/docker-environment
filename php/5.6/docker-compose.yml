@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  php56:
+    image: php5.6-fpm-alpine
+    container_name: php56
+    hostname: php56
+    user: 1000:1000
+    networks:
+      - server-network
+    volumes:
+      - /home/nikita/Projects:/projects
+
+networks:
+  server-network:
+    external: true

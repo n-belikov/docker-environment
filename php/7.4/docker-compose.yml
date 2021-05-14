@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  php73:
+    image: php7.4-fpm-alpine
+    container_name: php74
+    hostname: php74
+    user: 1000:1000
+    networks:
+      - server-network
+    volumes:
+      - /home/nikita/Projects:/projects
+
+networks:
+  server-network:
+    external: true
