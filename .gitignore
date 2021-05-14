@@ -1,5 +1,6 @@
 *
 !.gitignore
+!readme.md
 
 !nginx/
 !nginx/*
@@ -9,6 +10,7 @@
 !mariadb/
 !mariadb/*.yml
 !mariadb/*.sh
+!mariadb/Dockerfile
 
 !php/
 !php/**
