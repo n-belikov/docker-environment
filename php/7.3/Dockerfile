@@ -17,7 +17,10 @@ RUN apk add fish
 RUN apk add composer
 RUN apk add git
 RUN fish
-RUN adduser -h /home/user -u 1000 -D nikita
-USER nikita
+
+ARG user
+
+RUN adduser -h /home/user -u 1000 -D $user
+USER $user
 RUN fish -c "alias a \"php artisan\";funcsave a"
 WORKDIR /projects

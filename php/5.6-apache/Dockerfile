@@ -1,5 +1,7 @@
 FROM php:5.6-apache
 
+RUN echo $USER
+
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
 
 RUN install-php-extensions bcmath bz2 calendar dba exif gd gettext intl \

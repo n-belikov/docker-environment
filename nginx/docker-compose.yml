@@ -9,6 +9,7 @@ services:
       server-network:
         aliases:
           - "elya-smith.local"
+          - "company.kpd.local"
     logging:
       driver: json-file
       options:

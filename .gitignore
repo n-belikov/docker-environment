@@ -14,3 +14,8 @@
 
 !php/
 !php/**
+!redis/
+!redis/*
+
+!fish-console-config
+!fish-console-config/**
