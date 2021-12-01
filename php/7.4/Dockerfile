@@ -8,7 +8,7 @@ RUN install-php-extensions calendar exif gd gettext intl \
                            mysqli pcntl pdo_mysql xsl shmop \
                            sockets sysvmsg sysvsem sysvshm \
                            opcache zip
-RUN install-php-extensions pgsql pdo_pgsql xdebug yaml redis
+RUN install-php-extensions ssh2 pgsql pdo_pgsql xdebug yaml redis soap
 
 
 COPY php /usr/local/etc

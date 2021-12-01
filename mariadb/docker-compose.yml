@@ -19,6 +19,24 @@ services:
     volumes:
       - ./data:/var/lib/mysql
       - ./dumps:/dumps
+  mariadb-stb:
+    image: mariadb-ru-alpine
+    container_name: mariadb-stb
+    hostname: mariadb-stb
+    restart: always
+    networks:
+      - server-network
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./stb/data:/var/lib/mysql
+      - ./stb/dumps:/dumps
 
 networks:
   server-network:

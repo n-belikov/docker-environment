@@ -10,16 +10,28 @@ services:
         aliases:
           - "elya-smith.local"
           - "company.kpd.local"
+          - "login-forms.local"
     logging:
       driver: json-file
       options:
         max-size: 10m
     ports:
       - 80:80
+      - 443:443
       - 8080:8080
+      - 9070:9070
     volumes:
       - ./config:/etc/nginx
       - /home/nikita/Projects:/projects
+
+      - ./certs/certs:/etc/ssl/certs/selfsigned
+      - ./certs/private:/etc/ssl/private/selfsigned
+
+
+      - /certs:/certs/certs
+      - /ca:/certs/ca
+      - /private:/certs/private
+      - /meta:/certs/meta
 
 networks:
   server-network:

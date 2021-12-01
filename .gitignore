@@ -17,5 +17,10 @@
 !redis/
 !redis/*
 
+!sphinx/
+!sphinx/sphinx.sh
+!sphinx/configs/*
+!sphinx/docker-compose.yml
+
 !fish-console-config
 !fish-console-config/**

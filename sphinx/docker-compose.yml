@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  sphinx:
+    container_name: sphinx
+    command: /bin/sh sphinx.sh
+    networks:
+      - server-network
+    image: macbre/sphinxsearch:3.1.1
+    volumes:
+      - ./logs:/var/log/sphinx
+      - ./sphinx.sh:/sphinx.sh
+      - ./configs/sphinx.conf:/opt/sphinx/conf/sphinx.conf
+      - ./sphinx:/opt/sphinx/index:rw
+networks:
+  server-network:
+    external: true
