@@ -2,16 +2,11 @@ FROM php:8.1-fpm-alpine
 
 ARG user
 
-COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
-# TODO отказаться от install-php-extensions. Начинает сильно сбоить пиздец.
-RUN install-php-extensions calendar exif gettext intl
-RUN install-php-extensions mysqli pcntl
-RUN install-php-extensions pdo_mysql xsl shmop
-RUN install-php-extensions sockets sysvmsg sysvsem sysvshm
-RUN install-php-extensions opcache zip
-RUN install-php-extensions ssh2 pgsql pdo_pgsql
-RUN install-php-extensions xdebug yaml redis soap
-
+RUN apk add php8-pdo_mysql php8-pdo php8-exif php8-gettext php8-intl
+RUN apk add php8-xsl php8-shmop
+RUN apk add php8-sockets php8-sysvmsg php8-sysvsem php8-sysvshm
+RUN apk add php8-opcache php8-zip
+RUN apk add php8-xdebug php8-redis
 RUN apk add php8-gd php8-dom php8-xml php8-xmlwriter php8-fileinfo php8-tokenizer
 
 COPY php /usr/local/etc
