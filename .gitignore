@@ -19,7 +19,9 @@
 
 !sphinx/
 !sphinx/sphinx.sh
-!sphinx/configs/*
+!sphinx/configs/
+!sphinx/configs/sphinx.conf
+!sphinx/configs/word-forms.txt
 !sphinx/docker-compose.yml
 
 !fish-console-config
