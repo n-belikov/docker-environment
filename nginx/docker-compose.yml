@@ -8,9 +8,7 @@ services:
     networks:
       server-network:
         aliases:
-          - "elya-smith.local"
-          - "company.kpd.local"
-          - "login-forms.local"
+          - "pornhub.bolshoe.local"
     logging:
       driver: json-file
       options:

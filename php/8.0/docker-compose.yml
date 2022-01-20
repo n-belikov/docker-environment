@@ -2,15 +2,14 @@ version: "3.9"
 
 services:
   php74:
-    image: php7.4-fpm-alpine
-    container_name: php74
-    hostname: php74
+    image: php8.0-fpm-alpine
+    container_name: php80
+    hostname: php80
     user: 1000:1000
     networks:
       - server-network
     volumes:
       - /home/nikita/Projects:/projects
-      - $HOME/.ssh:/home/user/.ssh
 
 networks:
   server-network:
