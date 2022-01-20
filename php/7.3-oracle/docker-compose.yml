@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  php73:
+    image: php7.3-oracle-fpm-alpine
+    container_name: php73o
+    hostname: php73o
+    user: 1000:1000
+    networks:
+      - server-network
+    volumes:
+      - /home/nikita/Projects:/projects
+
+networks:
+  server-network:
+    external: true
